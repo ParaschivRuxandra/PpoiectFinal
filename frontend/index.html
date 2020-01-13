@@ -2,7 +2,20 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("form").submit(function(){
+    alert("Submitted");
+  });
+});
+</script>
 <style>
+
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -89,6 +102,16 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+#aboutSection {
+  height: 300px;
+  width: 900px;
+  color: "black";
+  top: 100px;
+  
+}
+
+
+
 </style>
 </head>
 <body background="img1.jpg" >
@@ -108,13 +131,13 @@ input[type=submit]:hover {
 </div>
 
 <ul>
-  <li><a class="active" href="#home">About</a></li>
-  <li><a href="#news">Contact</a></li>
-  <li><a href="#contact">Products</a></li>
-  <li><a href="#about">Home</a></li>
+  <li><a href="#aboutSection">About</a></li>
+  <li><a href="#container">Contact</a></li>
+  <li><a href="#galery">Products</a></li>
+  <li><a class="active" href="#about">Home</a></li>
 </ul>
 
-<div class="gallery">
+<div class="gallery" id="galery">
   <a target="_blank" href="download1.jpeg">
     <img src="download1.jpeg"  width="600" height="400">
   </a>
@@ -137,8 +160,8 @@ input[type=submit]:hover {
 
 
 <h3>Contact US</h3>
-<div class="container">
-  <form action="/action_page.php">
+<div class="container" id="container">
+  <form action="">
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -157,6 +180,13 @@ input[type=submit]:hover {
 
     <input type="submit" value="Submit">
   </form>
+</div>
+
+<div class="main" id="aboutSection">
+  <h2>About</h2>
+  <a>Discover  your beautiful clothes, perfect
+  for your events just here. A special site create to present 
+  for our wonderful clients, the new trend, the new collections</a>
 </div>
 
 
